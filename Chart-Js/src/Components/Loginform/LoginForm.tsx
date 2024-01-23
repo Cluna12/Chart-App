@@ -4,14 +4,17 @@ import { useState } from 'react';
 
 
 
-const  LoginForm = () => 
-  {const [emailState, setEmailState] = useState<string>(""); 
-  const [pwState,setPwState] = useState<string>(""); 
 
+const  LoginForm = () => 
+  {
+  const [emailState, setEmailState] = useState<string>(""); 
+  const [pwState, setPwState] = useState<string>(""); 
 
 
 
   return <>
+
+
   <h1>Login</h1>
   <Input onChange={(event) => { setEmailState(event.target.value); } } />
   <p>email</p>
@@ -19,11 +22,10 @@ const  LoginForm = () =>
   <Input onChange={(event) => { setPwState(event.target.value); } } />
   <p>Password</p>
    
-   <Button onClick={(event) => {console.log(emailState,pwState);}}>Submit</Button>
+   <Button onClick={() => {console.log(emailState,pwState);}}>Submit</Button>
    </>
 
 } 
-
 
 
   export default LoginForm;

@@ -1,21 +1,17 @@
-import './App.css';
-import LoginForm from './Components/Loginform/LoginForm';
+import { RequireAuth } from "./Components/RequireAuth";
+import { PocketProvider } from "./contexts/PocketContext";
 
 function App() {
-
   return (
-  <div className='wrapper'>
-    <LoginForm/>
-  </div>
-
-
-
+    <div>
+      <PocketProvider>
+        <RequireAuth />
+      </PocketProvider>
+    </div>
   );
 }
 
 export default App;
-
-
 
 /*
 import Button from 'react-bootstrap/Button';
