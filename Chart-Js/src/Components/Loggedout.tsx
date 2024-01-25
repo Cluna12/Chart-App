@@ -4,9 +4,7 @@ import { usePocket } from "../contexts/PocketContext";
 export default function LoggedOut() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  /*
-    const {register, login} = usePocket();
-    */
+
   const pocket = usePocket();
 
   return (
@@ -19,7 +17,7 @@ export default function LoggedOut() {
       }}
     >
       <div>
-        <label htmlFor="email">email</label>
+        <label htmlFor="email">Email</label>
         <input
           type="text"
           name="email"
@@ -29,7 +27,7 @@ export default function LoggedOut() {
         />
       </div>
       <div>
-        <label htmlFor="password">password</label>
+        <label htmlFor="password">Password</label>
         <input
           type="password"
           name="password"
@@ -47,7 +45,7 @@ export default function LoggedOut() {
           });
         }}
       >
-        Signup
+        Sign-up
       </button>
 
       <button
@@ -56,7 +54,7 @@ export default function LoggedOut() {
           pocket?.login(email, password).then(() => console.log("logged in"));
         }}
       >
-        Signin
+        Sign-in
       </button>
     </form>
   );

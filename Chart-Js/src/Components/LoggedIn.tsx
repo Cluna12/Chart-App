@@ -9,7 +9,9 @@ export default function LoggedIn() {
           e.preventDefault();
           pocket?.logout();
         }}
-      />
+      >
+        Sign Out
+      </button>
     </div>
   );
 }
